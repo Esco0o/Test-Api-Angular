@@ -1,0 +1,17 @@
+<div class="bg-dark pt-5">
+    <section class="container py-5 text-white">
+        <div class="row g-3">
+           
+            @for(p of products; track $index) {
+                <div class="col-md-3">
+                    <div class="border rounded p-3 text-center ">
+                        <img [src]="p.image" class="w-100 rounded" style="height: 50vh;" alt="">
+                    <h2 class="h5 mt-3">{{p.title.split(' ' , 3).join(' ')}}</h2>
+                    <h3>Price: {{p.price}}$</h3>
+                    <p class="small">{{p.description.split(' ' , 3 ).join(' ')}}</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+</div>
